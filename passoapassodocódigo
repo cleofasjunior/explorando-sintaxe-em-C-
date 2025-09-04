@@ -1,0 +1,33 @@
+using System;
+using System.Globalization;
+
+// Define a classe principal do programa.
+class DescontoCalculadora
+{
+    // Ponto de entrada da aplicação.
+    static void Main(string[] args)
+    {
+        double valorOriginal;
+        double percentualDesconto;
+
+        // Tenta converter as entradas do console para double de forma segura.
+        if (double.TryParse(Console.ReadLine(), NumberStyles.Any, CultureInfo.InvariantCulture, out valorOriginal) &&
+            double.TryParse(Console.ReadLine(), NumberStyles.Any, CultureInfo.InvariantCulture, out percentualDesconto))
+        {
+            // Valida se a porcentagem está entre 0 e 100.
+            if (percentualDesconto < 0 || percentualDesconto > 100)
+            {
+                // Exibe mensagem de erro para desconto inválido.
+                Console.WriteLine("Desconto invalido");
+            }
+            else
+            {
+                // Calcula o valor final aplicando o desconto.
+                double valorFinal = valorOriginal * (1 - percentualDesconto / 100.0);
+
+                // Imprime o resultado formatado com duas casas decimais.
+                Console.WriteLine(valorFinal.ToString("F2", CultureInfo.InvariantCulture));
+            }
+        }
+    }
+}
