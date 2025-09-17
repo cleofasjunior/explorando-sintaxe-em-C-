@@ -90,7 +90,3 @@ Durante o desenvolvimento deste projeto, foram aplicados e aprimorados os seguin
 ## 📄 Licença
 
 Sinta-se livre para usar, modificar e distribuir este código.
-
----
-
-👉 Você quer que eu inclua também o **código-fonte completo em C#** dentro de uma seção “📂 Código do Projeto” no README, para que qualquer pessoa possa ver de imediato a implementação sem precisar abrir os arquivos?
